@@ -1,0 +1,119 @@
+
+
+/* Global */
+body {
+    background: #2f5f02;
+    padding: 40px;
+}  
+
+.right {
+    text-align: right;
+}
+
+a {
+	-webkit-transition: all 150ms ease;
+	-moz-transition: all 150ms ease;
+	-ms-transition: all 150ms ease;
+	-o-transition: all 150ms ease;
+	transition: all 150ms ease; 
+}
+
+a:hover {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 8 */
+        filter: alpha(opacity=50); /* IE7 */
+        opacity: 0.6;
+        text-decoration: none;
+}
+
+
+/* Container */
+.container-fluid {
+    background: #FFFFFF;
+    margin: 40px auto 10px;
+    padding: 20px 40px 80px;
+    max-width: 960px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+
+/* Page Header */
+.page-header {
+    background: #f9f9f9;
+    margin: -30px -40px 40px;
+    padding: 20px 40px;
+    border-top: 4px solid #ccc;
+    color: #999;
+}
+
+.page-header h3 {
+        line-height: 0.88rem;
+        font-family: 'Montserrat', serif;
+        font-weight: 900;
+        color: #000;
+        margin-top:20px;
+}
+
+
+.text {
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+
+.faqheader {
+    margin: 70px 0px 25px 0px;
+}
+
+.faq {
+    margin-bottom: 50px;
+}
+
+.media {
+    margin-top: 25px;
+}
+
+.media img {
+    margin: 20px;
+}
+
+.ctaFin {
+    margin-top: 50px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mobile Only */
+@media (max-width: 767px) {
+    .page-header, .control-box {
+    text-align: center;
+    } 
+}
+@media (max-width: 479px) {
+    .caption {
+    word-break: break-all;
+    }
+}
+
+
+
+.footer {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #c9e4f7;
+    
+}
+
+.footer p {
+    padding-top: 15px;
+    font-size: 0.79rem;
+    font-weight: 600;
+}
+
+.iconJunta {
+    filter: brightness(0) invert(1);
+    margin-right: 10px;
+}
