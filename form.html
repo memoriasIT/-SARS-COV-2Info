@@ -36,37 +36,66 @@
             </div>
 
             <form>
-                <div class = "form-group">
-                    Fiebre: 
-                    <input type="text" class = "form-control" name="fiebre"  value="fiebre"/>
+                <label for="fiebre">Fiebre: (más de 37 es fiebre)</label> 
+                <div class = "form-row align-items-center">
+                    
+                    <div class="form-group col-auto my-1">
+                       
+                        
+                        <div class="form-check"><input class="form-check-input" type="radio" name="gridRadios"  id = "sifiebre" value="si" >
+                        <label class="form-check-label" >
+                          Si
+                        </label>
+                        
+                        </div>
+                       
+                    </div>
+                    <div class="form-group col-mr-4 mr-2 my-2">
+                        <input type="number" class = "form-control" name="fiebre"  id = "fiebre" value="36.5" disabled />
+                    </div>
+                    
                 </div>
+                         
+                    <div class="form-group"> 
+                       
+                        <div class="form-check"><input class="form-check-input" type="radio" name="gridRadios"  id = "nofiebre" value="no" checked  >
+                        <label class="form-check-label" >
+                          No
+                        </label>
+                    </div>
+                </div>
+               
                 
                 <div class = "form-group">
                     Fiebre: 
                     <input type="number" class = "form-control" name="fiebre"  value="36.5"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">Example select</label>
+                    <label for="exampleFormControlSelect1">Provincia</label>
                     <select class="form-control" id="exampleFormControlSelect1">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
+                      <option selected>--Seleccione una provincia--</option>
+                      <option>Almería</option>
+                      <option>Cádiz</option>
+                      <option>Córdoba</option>
+                      <option>Granada</option>
+                      <option>Huelva</option>
+                      <option>Jaén</option>
+                      <option>Málaga</option>
+                      <option>Sevilla</option>
                     </select>
                   </div>
                
                <div class="form-group">
                 <label class = "form-label">Ha estado con alguien que tenga COVID?</label> 
-                <div class="form-check">
+                <div class="form-check 1">
                     
 
-                    <input class="form-check-input" type="radio" name="gridRadios"  value="si" checked>
+                    <input class="form-check-input" type="radio" name="gridRadios"  value="si" >
                     <label class="form-check-label" >
                       Si
                     </label>
                   </div>
-                  <div class="form-check">
+                  <div class="form-check 1">
                     <input class="form-check-input" type="radio" name="gridRadios" value="no">
                     <label class="form-check-label" ">
                       No
@@ -84,9 +113,28 @@
                     </label>
                   </div>
                 </div>
+                
+                    <button class="btn btn-success" type="submit">Submit form</button>
+                
             </form>
 
         </div>
         </div>
     </div>
 </body>
+<script>
+    // Accedemos al botón
+var fiebre = document.getElementById('fiebre');
+
+// evento para el input radio del "si"
+document.getElementById('sifiebre').addEventListener('click', function() {
+  console.log('Vamos a habilitar el input text');
+  fiebre.disabled = false;
+});
+
+// evento para el input radio del "no"
+document.getElementById('nofiebre').addEventListener('click', function() {
+  console.log('Vamos a deshabilitar el input text');
+  fiebre.disabled = true;
+});
+</script>
