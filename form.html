@@ -30,111 +30,211 @@
                 <img height="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Emblema_de_la_Junta_de_Andaluc%C3%ADa.svg/1280px-Emblema_de_la_Junta_de_Andaluc%C3%ADa.svg.png" alt="" srcset="">
                 
                 <div class="column">
-                        <b><h3>Rellene el test</h3></b>
-                        <p>Este test te dirá si podría tener el Covid-19 o no.</p>
+                        <b><h3>Test COVID-19</h3></b>
+                        <p>Rellene el test si está preocupado de tener el COVID-19.</p>
                 </div>
             </div>
+            <div >
+            <label for="fiebre"><i>Marque las casillas si presenta el sintoma</i></label> 
 
+            </div>
+             <hr size="8px" class= "mt-0 my-1" />
+            <label class ="my-1" >  <H5>Síntomas habituales</H5></label> 
+           
             <form>
-                <label for="fiebre">Fiebre: (más de 37 es fiebre)</label> 
                 <div class = "form-row align-items-center">
                     
                     <div class="form-group col-auto my-1">
                        
                         
-                        <div class="form-check"><input class="form-check-input" type="radio" name="gridRadios"  id = "sifiebre" value="si" >
+                        <div class="form-check"><input class="form-check-input" type="checkbox" onchange="habilitar(this.checked);" id = "sifiebre" value="fiebre" >
                         <label class="form-check-label" >
-                          Si
+                          Fiebre
                         </label>
                         
                         </div>
                        
                     </div>
                     <div class="form-group col-mr-4 mr-2 my-2">
-                        <input type="number" class = "form-control" name="fiebre"  id = "fiebre" value="36.5" disabled />
-                    </div>
-                    
-                </div>
-                         
-                    <div class="form-group"> 
-                       
-                        <div class="form-check"><input class="form-check-input" type="radio" name="gridRadios"  id = "nofiebre" value="no" checked  >
-                        <label class="form-check-label" >
-                          No
-                        </label>
+                        <input type="number" class = "form-control" name="fiebre"  id = "fiebre" value="37" disabled />
                     </div>
                 </div>
+                
+                 
+              
                
                 
-                <div class = "form-group">
-                    Fiebre: 
-                    <input type="number" class = "form-control" name="fiebre"  value="36.5"/>
-                </div>
-                <div class="form-group">
-                    <label for="exampleFormControlSelect1">Provincia</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                      <option selected>--Seleccione una provincia--</option>
-                      <option>Almería</option>
-                      <option>Cádiz</option>
-                      <option>Córdoba</option>
-                      <option>Granada</option>
-                      <option>Huelva</option>
-                      <option>Jaén</option>
-                      <option>Málaga</option>
-                      <option>Sevilla</option>
-                    </select>
-                  </div>
-               
-               <div class="form-group">
-                <label class = "form-label">Ha estado con alguien que tenga COVID?</label> 
-                <div class="form-check 1">
-                    
-
-                    <input class="form-check-input" type="radio" name="gridRadios1"  value="si" >
-                    <label class="form-check-label" >
-                      Si
-                    </label>
-                  </div>
-                  <div class="form-check 1">
-                    <input class="form-check-input" type="radio" name="gridRadios1" value="no">
-                    <label class="form-check-label" ">
-                      No
-                    </label>
-                </div>
-                </div>
-
+                  <div class="form-group">
                   
-                <div class="form-group">
-                    BLABLABLA
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
-                      Cajita default
-                    </label>
+                  <div class="form-check 1">
+                      
+                      <input class="form-check-input" type="checkbox" name="checkbox1"  >
+                      <label class="form-check-label" >
+                        Tos seca
+                      </label>
+                    </div>
+                    
+
                   </div>
+                  <div class="form-group">
+                  
+                    <div class="form-check 1">
+                        
+                        <input class="form-check-input" type="checkbox" name="checkbox2"   >
+                        <label class="form-check-label" >
+                          Cansancio
+                        </label>
+                      </div>
+                    </div>
+                    <hr size="8px" class= "mt-0 my-1" />
+
+
+                    <label class ="md-5 mt-3" >  <H5>Síntomas graves</H5> <i>Si presenta alguno de estos síntomas además de los anteriores llame al 900 400 061</i> </label> 
+                   
+                    <div class="form-group mt-3">
+                  
+                      <div class="form-check 1">
+                          
+                          <input class="form-check-input" type="checkbox" name="checkbox3"   >
+                          <label class="form-check-label" >
+                            Dificultad para respirar o sensación de falta de aire
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                  
+                        <div class="form-check 1">
+                            
+                            <input class="form-check-input" type="checkbox" name="checkbox4"   >
+                            <label class="form-check-label" >
+                              Dolor o presión en el pecho
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                  
+                          <div class="form-check 1">
+                              
+                              <input class="form-check-input" type="checkbox" name="checkbox5"   >
+                              <label class="form-check-label" >
+                                Incapacidad para hablar o moverse
+                              </label>
+                            </div>
+                          </div>
+                          <hr size="8px" class= "mt-0 my-1" />
+                    
+
+                          <label class ="my-1" >  <H5>Síntomas menos comunes</H5>  </label> 
+                         
+
+                          <div class="form-group ">
+                            <div class="form-row">
+                              <div class="col ml-4">
+                                <input class="form-check-input" type="checkbox" name="checkbox6"   >
+                              <label class="form-check-label" >
+                                Molestias y dolores
+                              </label>
+
+                              </div>
+                              <div class="col">
+                                <input class="form-check-input" type="checkbox" name="checkbox7"   >
+                              <label class="form-check-label" >
+                                Dolor de garganta
+                              </label>
+
+                              </div>
+                              <div class="col">
+                                <input class="form-check-input" type="checkbox" name="checkbox8"   >
+                              <label class="form-check-label" >
+                                Diarrea
+
+                              </label>
+
+                              </div>
+                              
+                            </div>
+                            <div class="form-row">
+                              <div class="col ml-4">
+                                <input class="form-check-input" type="checkbox" name="checkbox9"   >
+                              <label class="form-check-label" >
+                                Conjuntivitis
+                              </label>
+
+                              </div>
+                              <div class="col">
+                                <input class="form-check-input" type="checkbox" name="checkbox10"   >
+                              <label class="form-check-label" >
+                                Dolor de cabeza
+                              </label>
+
+                              </div>
+                              <div class="col">
+                                <input class="form-check-input" type="checkbox" name="checkbox11"   >
+                              <label class="form-check-label" >
+                                Pérdida del sentido del olfato 
+
+                              </label>
+
+                              </div>
+                              
+                            </div>
+                            <div class="form-row"> 
+                              <div class="col ml-4">
+                                <input class="form-check-input" type="checkbox" name="checkbox12"   >
+                              <label class="form-check-label" >
+                                Perdida del sentido del gusto
+                              </label>
+
+                              </div>
+                              <div class="col">
+                                <input class="form-check-input" type="checkbox" name="checkbox13"   >
+                              <label class="form-check-label" >
+                                Erupciones cutáneas
+                              </label>
+
+                              </div>
+                              <div class="col">
+                                <input class="form-check-input" type="checkbox" name="checkbox14"   >
+                              <label class="form-check-label" >
+                                Pérdida del color en la piel
+                              </label>
+
+                              </div>
+                              
+                              
+                            </div>
+                          </div>
+                          <hr size="8px" class= "mt-0 my-1" />
+
+                  </div>
+               
+
+
+                
                 </div>
                 
-                    <button class="btn btn-success" type="submit">Submit form</button>
+                <a href="index.html" type="button" class="btn btn-success btn-lg mt-4">Enviar</a>
                 
             </form>
 
         </div>
         </div>
     </div>
+    <div class="footer">
+      <img class="iconJunta" height="25px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Emblema_de_la_Junta_de_Andaluc%C3%ADa.svg/1280px-Emblema_de_la_Junta_de_Andaluc%C3%ADa.svg.png" alt="">
+      <p>JUNTA DE ANDALUCÍA</p>
+  </div>
 </body>
 <script>
-    // Accedemos al botón
-var fiebre = document.getElementById('fiebre');
-
-// evento para el input radio del "si"
-document.getElementById('sifiebre').addEventListener('click', function() {
-  console.log('Vamos a habilitar el input text');
-  fiebre.disabled = false;
-});
-
-// evento para el input radio del "no"
-document.getElementById('nofiebre').addEventListener('click', function() {
-  console.log('Vamos a deshabilitar el input text');
-  fiebre.disabled = true;
-});
+  function habilitar(value)
+  {
+    if(value==true)
+    {
+      // habilitamos
+      document.getElementById("fiebre").disabled=false;
+    }else if(value==false){
+      // deshabilitamos
+      document.getElementById("fiebre").disabled=true;
+    }
+  }
 </script>
